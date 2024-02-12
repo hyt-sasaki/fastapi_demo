@@ -2,10 +2,11 @@ version: '3'
 
 tasks:
   check:
-    desc: 'check lint and format error'
+    desc: 'check lint, format, type error'
     cmds:
       - poetry run ruff format --check
       - poetry run ruff check
+      - poetry run mypy demo tests
   fix:
     desc: 'check lint error'
     cmds:
