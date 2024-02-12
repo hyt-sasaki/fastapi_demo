@@ -12,5 +12,4 @@ jobs:
           python-version-file: 'pyproject.toml'
       - uses: abatilo/actions-poetry@v2
       - run: task init:deps
-      - run: task lint:check
       - run: task test

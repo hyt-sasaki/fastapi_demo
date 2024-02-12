@@ -12,4 +12,6 @@ tasks:
     cmd: poetry run uvicorn demo.main:app --reload
   test:
     desc: 'run tests'
+    deps:
+      - lint:check
     cmd: poetry run pytest tests
