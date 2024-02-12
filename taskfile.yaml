@@ -4,10 +4,9 @@ includes:
   lint:
     dir: .
     taskfile: tasks/taskfile.lint.yaml
-tasks:
   init:
-    desc: 'initiate this project'
-    cmd: poetry install
+    taskfile: tasks/taskfile.init.yaml
+tasks:
   run:
     desc: 'run server'
     cmd: poetry run uvicorn demo.main:app --reload

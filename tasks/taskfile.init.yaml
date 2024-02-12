@@ -1,0 +1,18 @@
+version: '3'
+
+tasks:
+  deps:
+    desc: 'install dependencies'
+    cmd: poetry install
+  jetbrains-plugins:
+    desc: install PyCharm plugins
+    platforms:
+      - darwin
+    preconditions:
+      # about pycharm script: https://pleiades.io/help/pycharm/working-with-the-ide-features-from-command-line.html#toolbox
+      - which pycharm
+      - sh: (! ps aux | grep '[p]ycharm')
+        msg: 'Please exit PyCharm and re-execute this task'
+    cmds:
+      - pycharm installPlugins com.koxudaxi.ruff com.leinardi.pycharm.mypy
+      - echo "Please reopen PyCharm"

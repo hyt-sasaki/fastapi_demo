@@ -17,6 +17,9 @@
                   <Item>
                     <option name="path" value="taskfile.yaml" />
                   </Item>
+                  <Item>
+                    <option name="path" value="tasks/taskfile.init.yaml" />
+                  </Item>
                 </list>
               </option>
             </SchemaInfo>
