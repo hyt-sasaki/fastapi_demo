@@ -1,0 +1,15 @@
+on:
+  push:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/setup-task@v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: 'pyproject.toml'
+      - uses: abatilo/actions-poetry@v2
+      - run: task init
+      - run: task lint:check
