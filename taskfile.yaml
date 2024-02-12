@@ -10,3 +10,6 @@ tasks:
   run:
     desc: 'run server'
     cmd: poetry run uvicorn demo.main:app --reload
+  test:
+    desc: 'run tests'
+    cmd: poetry run pytest tests
