@@ -1,0 +1,6 @@
+version: '3'
+
+includes:
+  lint:
+    dir: .
+    taskfile: tasks/taskfile.lint.yaml
