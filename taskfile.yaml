@@ -4,3 +4,7 @@ includes:
   lint:
     dir: .
     taskfile: tasks/taskfile.lint.yaml
+tasks:
+  run:
+    desc: 'run server'
+    cmd: poetry run uvicorn demo.main:app --reload
